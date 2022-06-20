@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pass Fail</title>
+</head>
+<body>
+	<script>
+		function output(){
+			var mcq = document.result.mcq.value;
+			//mcq = parseInt(mcq);
+			var desc = document.result.desc.value;
+			//desc = parseInt(desc);
+			var evd = document.result.evd.value;
+			//evd = parseInt(evd);
+
+			var result = "";
+			if(mcq>=80 && desc>=60 && evd>=60){
+				result="You have passed";
+			}else{
+				result="You have failed";
+			}
+			document.getElementById("viewresult").innerHTML=result;
+		}
+		
+	</script>
+
+
+	<h2>Student Result</h2>
+	<form name="result">
+		<input type="text" name="mcq" placeholder="Enter MCQ Number" value=""><br>
+		<input type="text" name="desc" placeholder="Enter Descriptive Number" value=""><br>
+		<input type="text" name="evd" placeholder="Enter Evidence Number" value=""><br>
+		<input type="button" onclick="output()" value="check">
+	</form>
+
+	<h1 id="viewresult"></h1>
+	
+</body>
+</html>

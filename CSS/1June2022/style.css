@@ -1,0 +1,27 @@
+* {
+	text-align: center;
+}
+
+h1,h2,h3 {
+	text-align: left;
+	color: #E94747;
+}
+
+.para {
+	font-size: 22px;
+	color: #E7BDBD;
+	font-family: Tahoma;
+}
+
+article {
+	background-color: #DA89C8;
+	border: 2px solid black;
+}
+
+.large {
+font-size: 40px;
+}
+
+.center {
+text-align: center;
+}

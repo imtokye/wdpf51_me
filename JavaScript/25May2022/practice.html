@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>factorial</h1>
+
+	<script>
+		// function factorial(n){
+		// 	if(n==0){
+		// 		return 1;
+		// 	}
+		// 	return n * factorial(n-1)
+		// }
+		// document.write(factorial(prompt("Enter number")));
+
+	</script>
+	<h2>max number</h2>
+	<script>
+		// var a=220
+		// var b= 300
+		// var c=40
+		// function maxnumber(){
+		// 	if(a>b && a>c){
+		// 		document.write(a+"is a maxnumber")
+
+		// 		}else if(b>a && b>c){
+		// 			document.write(b+"is a maxnumber")
+		// 		}else{c+"is a maxnumber"}
+
+		// }
+		// maxnumber();
+	</script>
+	<h3>Sorting</h3>
+	<script>
+		// var student =["Rabbani", "Aminul", "Masud", "Sajedul", "Dipu"]
+		// student.sort();
+		// for(x=0; x<student.length; x++){
+		// 	document.write(student[x] + "<br>");
+		// }
+	</script>
+	<script>
+	function prime_number(n){
+		if (n==1) { 
+			return n + "is not a prime number"
+		}else if(n==2){
+			return n+ "is a prime number"
+		}else{
+			for(var i=2; i<n; i++){
+				if(n%i==0){
+					return n + "is not a prime number"
+				}
+			}
+		}return n+ "is a prime number"
+	}
+	document.write(prime_number(prompt("Enter number")));
+	</script>
+	
+</body>
+</html>

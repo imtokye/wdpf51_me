@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit=" trainneeform() ; return false;" name="tform">
+    <fieldset>
+        <legend>Trainee form</legend>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" id="tname"></td>
+    </tr>
+    <tr>
+        <td>Contact</td>
+        <td><input type="number" id="tcontact"></td>
+    </tr>
+    <tr>
+        <td>Rrmarks</td>
+        <td><textarea name="" id="remarks" cols="22" rows="4" id="textarea"></textarea></td>
+    </tr>
+    <tr>
+        <td>Gender :</td>
+        <td>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+        </td>
+    </tr>
+    <tr>
+        <td>Courses</td>
+        <td>
+            <input type="checkbox" name="courses" value="NT">NT
+            <input type="checkbox" name="courses" value="LAD">LAD
+            <input type="checkbox" name="courses" value="DDD">DDD
+            <input type="checkbox" name="courses" value="ESAD">ESAD
+        </td>
+    </tr>
+    <tr>
+        <td>locatin :</td>
+        <td>
+            <select name="location" id="">
+                <option value="">--select</option>
+                <option value="Bananni">Bananni</option>
+                <option value="Dhanmondi">Dhanmondi</option>
+                <option value="Mirput">Mirput</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Submit"></td>
+        <td></td>
+    </tr>
+</table>
+
+    </fieldset>
+</form>
+
+<script>
+function trainneeform(){
+output=" ";
+
+var _name=document.getElementById("tname").value
+output += "Name :" + _name + '\n';
+
+var _contact =document.getElementById("tcontact").value
+output += "Contact :" + _contact + '\n';
+
+
+var _remarks =document.getElementById("remarks").value
+output += "Remarks :" + _remarks + '\n';
+
+var _gender =document.tform.gender.value;
+output += "Gender :" + _gender + '\n';
+ 
+
+var _location =document.tform.location.value;
+output += "Location :" + _location + '\n';
+ 
+//checkbox
+var _course= document.tform.courses;
+var final=""
+ for(i=0; i<_course.length ; i++){
+     if(_course[i].checked==true){
+        final +=  _course[i].value;
+     }
+
+ }
+ output += "Course :" + final + "  " + " ";
+console.log(output);
+
+var a= open(""," ","")
+a.document.write('<center ><textarea id="finalout" cols="35" rows="12"></textarea></center>')
+a.document.getElementById('finalout').innerHTML= output ;
+a.document.getElementById('finalout').style=("  font-size: 40px; ");
+}
+
+
+
+</script>
+    
+</body>
+</html>

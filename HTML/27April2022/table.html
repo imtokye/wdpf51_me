@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+
+	}
+	thead, tfoot{
+		background-color: #C062C8;
+		color: white;
+		font-weight: bold;
+
+	}
+	tbody {background-color: silver;}
+
+	.txtcenter	{
+		text-align: center;
+
+	}
+	.totalamount {
+		text-align: right;
+	}
+
+	td,td {
+		padding: 5px;
+	}
+
+	caption{
+		font-weight: bold;
+		font-size: 30;
+	}
+	</style>
+</head>
+<body>
+	<h3>Table with thead, tbody, tfoot</h3>
+	<table>
+		<caption>Product List</caption>
+		<thead>
+			<tr>
+				<td>Item</td>
+				<td>Quantity</td>
+				<td>Price</td>
+				<td>Extended</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>Hard Disk</td>
+				<td class="txtcenter">1</td>
+				<td>500</td>
+				<td>400</td>
+
+			</tr>
+			<tr>
+				<td>Cd Drive</td>
+				<td class="txtcenter">1</td>
+				<td>500</td>
+				<td>400</td>
+			</tr>
+			<tr>
+				<td>Cds</td>
+				<td class="txtcenter">1</td>
+				<td>200</td>
+				<td>20</td>
+			</tr>
+			
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td colspan="3" class="totalamount" >Total Amount</td>
+				<td>950</td>
+				
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

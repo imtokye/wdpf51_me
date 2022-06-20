@@ -1,0 +1,35 @@
+#wrapper {
+			width: 100%;
+			min-width: 550px;
+			max-width: 1000px;
+			margin: 0 auto;
+			background-color: #FFF;
+
+		}
+		#header{
+			background-color: #554B4B;
+			color: #FAF4F4;
+			padding: 10px;
+			height: 50px;
+		}
+		#sidebar {
+			width: 33%;
+			height: ;
+			padding: 10px;
+			float: left;
+			background-color: #D3C89B;
+		}
+		#main{
+			margin-left: 36%;
+			margin-left: -moz-calc(33% + 20px);
+			margin-left: -webkit-calc(33% + 20px);
+			margin-left: calc(33% + 20px);
+			padding: 10px 20px;
+			background-color: #EDCECE;
+		}
+		#footer{
+			background-color: #D65959;
+			color: #EE3737;
+			padding: 10px;
+			clear: both;
+		}

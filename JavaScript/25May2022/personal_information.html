@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function profile_info() {
+			var fullname = document.info.fullname.value;
+			var gender = document.info.gender.value;
+			var district = document.info.district.value;
+			var profile = document.info.profile.value;
+			var output;
+
+			output = "Name" + fullname + <br>;
+			output += "Gender" + gender + <br>;
+			output += "District" + district + <br>;
+			output += "Profile" + profile;
+
+			document.getElementById("Show").innerHTML=output;
+		}
+	</script>
+
+
+	<h2>Personal Informatrion</h2>
+	<form name="info">
+		Name: <br> <input type="text" name="fullname" placeholder="Enter Name"><br>
+		Gender: <br> 
+		Male:<input type="radio" name="gender" value="male">
+		Female:<input type="radio" name="gender" value="Female">
+		District: <br>
+		<select name="district">
+			<option value=""disable selected>Select One</option>
+			<option value="Dhaka">Dhaka</option>
+			<option value="Khulna">Khulna</option>
+		</select><br>
+		Hobbies: <br>
+		Cricket: <input type="checkbox" name="cricket">
+		Football: <input type="checkbox" name="football">
+		<br>
+		Profile: <br>
+		<textarea name="profile" ></textarea>
+		<br>
+		<input type="button" value="SEND" onclick="profile_info()">
+	
+
+	</form>
+
+	<h1 id="Show"></h1>
+</body>
+</html>

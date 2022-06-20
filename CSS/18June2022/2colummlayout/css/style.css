@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 18px;
+	font-family: Tahoma;
+	line-height: 30px;
+	letter-spacing: 2px;
+	background-color: #9CD79B;
+
+}
+.banner {
+	text-align: center;
+	background-color: #5CC47C;
+	padding: 20px;
+}
+.logo img {
+	width: 100px;
+	height: auto;
+	float: left;
+}
+.menu input[type="text"]{
+	margin-top: 10px;
+	width: 300px;
+	padding: 5px;
+}
+.menu {
+	background-color: #000;
+
+}
+
+.menu ul{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.menu ul li{
+	display: inline-block;
+	
+
+}
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	display:block ;
+	padding: 10px;
+
+}
+.menu a:hover {
+	color: #000;
+	background-color: #fff;
+}
+.left{
+	width: 74%;
+	float: left;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+}
+.right{
+	width: 24.5%;
+	float: left;
+}
+.card{
+	margin-top: 10px;
+	padding: 20px;
+	background-color: #fff;
+}
+.cardImage img{
+	margin: 5px 0;
+	width: 100%;
+	height: auto;
+}
+.footer {
+	clear: both;
+	padding: 30px;
+	background-color: #719EA0;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}

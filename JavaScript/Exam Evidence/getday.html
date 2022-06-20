@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function showdd(){
+			var mydate= document.myform.mydate.value;
+			//alert(mydate);
+			var d = new Date(mydate);
+			//alert(d);
+
+			var week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			
+			alert(week[d.getDay()]);
+		}
+	</script>
+	<form name="myform">
+		<input type="date" name="mydate"><br>
+		<input type="button" value="Show day" onclick="showdd()">
+	</form>
+	
+</body>
+</html>

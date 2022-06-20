@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function radiocheck(){
+			var hardwere = document.hardwere;
+			var display = "Your answer is: \n";
+			//alert(hardwere.length);
+			for(var i=0; i<hardwere.length; i++){
+				if(hardwere.elements[i].checked==true){
+					display += hardwere.elements[i].value + "\n";
+					
+				}
+			} 
+			hardwere.answer.value = display;
+		}
+	</script>
+
+	<form name="hardwere">
+
+	<input type=radio name="components" value="Cost" >
+Cost<br>
+	<input type=radio name="components" value="Reliability">
+Reliability<br>
+    <input type=radio name="components" value="Reputation">
+ 	Reputation <br>
+ 	<input type=radio name="components" value="Ease of Use">Ease of use
+
+<h2>Which of the following do you plan to purchase with your computer?
+Check all that apply:</h2>
+
+ <input type=checkbox name="printer" value="Printer" >
+Printer<br>
+ <input type=checkbox name="disk" value="High Capacity Disk">
+High Capacity Disk<br>
+ <input type=checkbox name="scan" value="Scanner" >
+Scanner<br>
+ <input type=checkbox name="mem" value="Additional Memory">
+Added Memory <br>
+
+Your Answer is: <br>
+
+ <textarea name = "answer" cols=50 rows=8 ></textarea>
+ <input type=button value=" Sort It Out "
+onClick="radiocheck()"> 
+	</form>
+	
+</body>
+</html>

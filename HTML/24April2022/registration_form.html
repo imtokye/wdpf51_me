@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h3>Student Registration Form</h3>
+	
+	<form action="" method="post">
+		<fieldset>
+			<legend>Admission Info</legend>
+		<input type="text" name="fullname" placeholder="Enter your full name"><br>
+		<input type="date" name="dob"><br>
+		<label for="">Gender:</label><br>
+		Male <input type="radio" name="gender" value="male">
+		Female <input type="radio" name="gender" value="Female">
+		others <input type="radio" name="gender" value="Others"><br>
+		Subjects: <br>
+		PHP <input type="checkbox" name="php" value="php">
+		MySQL <input type="checkbox" name="mysql" value="mysql">
+		Java <input type="checkbox" name="java" value="java"><br>
+		location: <br>
+		<select name="location">
+			<option value=""disabled selected>Select One</option>
+			<optgroup label="Mirpur">
+				<option value="1">Mirpur 10</option>
+				<option value="5">Mirpur 11</option>
+				<option value="6">Mirpur 12</option>
+			</optgroup>
+			<optgroup label="Dhanmondi">
+				<option value="7">Shankar</option>
+				<option value="8">Zigatola</option>
+				<option value="9">Dhanmondi 15</option>
+			</optgroup>
+			
+			<option value="3">Paltan</option>
+			<option value="4">Gulshan</option>
+		</select><br>
+		<input type="file" name="photo">
+		<input type="hidden" name="Attachment"><br>
+		Phone:<input type="text" name="phone">
+		<input type="image" src="button.jpg" value="Button">
+
+		</fieldset>
+		<fieldset>
+			<legend>Login info</legend>
+			<input type="email" name="email" placeholder="Enter valid email address"><br>
+			<input type="password" name="Password" placeholder="password"><br>
+			<input type="password" name="Repoeat_Password" placeholder="retype_password">
+		</fieldset>
+		<input type="submit" name="submit" value="Submit">
+		<button type="button" name="submit">submit</button>
+		<input type="reset" name="reset" value="RESET">
+	</form>
+</body>
+</html>

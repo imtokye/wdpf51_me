@@ -1,0 +1,7 @@
+step1: http://github.com/roobon/wdpf51.git
+step2: GO to your Drive and click to git bash here 
+step3: git clone http://github.com/roobon/wdpf51.git
+
+Next you will get  update
+step1: Go to your Project Folder right click to git bash here
+step2: git pull

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function validate(){
+			var name = document.regform.name.value;
+			var email = document.regform.email.value;
+			var number = document.regform.number.value;
+			// var gender = document.regform.gender.value;
+			// var language = document.regform.language.value;
+			if (name==""){
+				alert("You have to put a name");
+			} else if(email==""){
+			alert("You have to put an email");
+			} else if(number==""){
+			alert("You have to put a number");}
+			// }else if(gender==""){
+			// 	alert("You have chose one");
+			// } else if(language==""){
+			// 	alert("You have to select a language");
+			// }
+			else{
+				alert("All are submited");
+			}
+		}
+		
+	</script>
+<h2>Registration Form</h2>
+	<form name="regform">
+		Name:<br><input type="text" name="name" placeholder="Enter Your Name"><br>
+		Email:<br><input type="text" name="email" placeholder="Enter Your email"><br>
+		Phone number:<br><input type="number" name="number" placeholder="Enter Your phone number"><br>
+		Gender:<br>
+		Male <input type="radio" name="gender" value="male">
+		Female <input type="radio" name="gender" value="female">
+		Others <input type="radio" name="gender" value="others"><br>
+		Language: <br> 
+		<select name="" id="">
+			<option value="select language">Select language</option>
+			<option value="php">PHP</option>
+			<option value="java">JAVA</option>
+			<option value="laravel">Laravel</option>
+		</select><br>
+		About:<br>
+		<textarea name="" id="" cols="25" rows="5"></textarea><br>
+		<input type="button" onclick="validate()" value="REGISTER">
+	</form>
+	
+</body>
+</html>
