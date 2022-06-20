@@ -1,0 +1,26 @@
+.navbar{
+	margin-bottom: 0;
+	border-radius: 4px 4px 0 0;
+}
+.jumbotron{
+	border-radius: 0 !important;
+}
+.footer {
+	border-radius: 0;
+	background-color: #403C3C;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+   
+  }
+  .wdpf-content{
+  	height: 420px;
+  	line-height: 20px;
+  	letter-spacing: 2px;
+  	text-align: justify;
+
+  }
