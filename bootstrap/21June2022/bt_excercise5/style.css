@@ -24,4 +24,15 @@
   	text-align: justify;
 
   }
-  
+  .breadcrumb>li+li:before{
+  	content: ">";
+  }
+  .breadcrumb{
+  	background-color: #928383;
+  	border-radius: 0;
+  }
+  .link{
+  	padding-top: 50px;
+  	text-align: center;
+  	display: block;
+  }
