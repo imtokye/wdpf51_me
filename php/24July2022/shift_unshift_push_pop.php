@@ -16,7 +16,7 @@ echo "Applied Array_shift for remove from beggining";
 print_r($divisions);
 
 array_push($divisions, "Barishal", "Rangpur");
-echo "Applied Array_push for Add in to ending";
+echo "Applied Array_push for Add in ending";
 print_r($divisions);
 
 ?>
