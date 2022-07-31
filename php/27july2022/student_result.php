@@ -1,13 +1,13 @@
 <?php 
 class student {
-    public $id;
-    public $name;
-    public $batch;
+    // public $id;
+    // public $name;
+    // public $batch;
     public $lines;
 
     public function __construct(){
-        $lines = file('result.txt');
-        $this->lines = $lines;
+        $para = file('result.txt');
+        $this->lines = $para;
     }
 
     public function result($sid){
