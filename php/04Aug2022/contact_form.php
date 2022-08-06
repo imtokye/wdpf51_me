@@ -7,23 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
-extract($_POST);
-$to = "imtokye@gmail.com";
-if(mail($to, $subject, $message)){
-    echo "Sent successfully";
-}
-
-?>
-
+    <?php 
+        extract($_POST);
+        $to = "golamrabbany10@gmail.com";
+        if(mail($to, $subject, $message)){
+            echo "Sent successfully";
+        }
+    ?>
     <h2>Contact with us</h2>
     <form action="" method="post">
-        <input type="text" name="email" placeholder="Enter your email"><br>
-        <input type="text" name="name" placeholder="Enter your name"><br>
+        <input type="text" name="email" placeholder="Enter your Email"><br>
+        <input type="text" name="name" placeholder="Enter your Name"><br>
         <input type="text" name="subject" placeholder="Enter Subject"><br>
-        <textarea name="message" placeholder="enter your message" id="" ></textarea><br>
-        <input type="submit" name="submit" value="SEND"><br>
-        </form>
-    
+        <textarea name="message" placeholder="Enter Message"></textarea><br>
+        <input type="submit" name="submit" value="SEND">
+    </form>    
+
 </body>
 </html>
