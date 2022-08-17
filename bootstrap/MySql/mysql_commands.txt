@@ -1,0 +1,6 @@
+#######MySql Server connection#####
+mysql -h localhost -u root -p 
+## To see all databases ##
+show databases;
+## Create database ##
+create database wdpf51;
