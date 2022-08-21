@@ -16,32 +16,40 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Student List</h1>
     <div class="container">
         <table class="table table-striped">
             <tr>
-                <th>Number</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>ID</th>
+                <th>Name</th>
                 <th>Email</th>
+                <th>Phone Number</th>
+                <th>Action</th>
 
             </tr>
             <?php 
-$sql = "SELECT * FROM employees";
+$sql = "SELECT * FROM students";
 $result = $db->query($sql);
+echo "<h2> Total record found $result->num_rows</h2>";
 
 while($data = $result->fetch_assoc()){
     ?>
             <tr>
-                <td><?php echo $data['employeeNumber']; ?></td>
-                <td><?php echo $data['firstName'];?></td>
-                <td><?php echo $data['lastName'];?></td>
-                <td><?php echo $data['email'];?></td>
+                <td><?php echo $data['student_id']; ?></td>
+                <td><?php echo $data['student_name'];?></td>
+                <td><?php echo $data['student_email'];?></td>
+                <td><?php echo $data['student_phone'];?></td>
+                <td>
+                    <a href="student_delete.php?id=<?php echo $data['student_id'] ?> "onclick=" return confirm('Are you sure')"><img src="bin.png" width="30" alt=""></a>
+
+                    <a href="student_delete.php?id=<?php echo $data['student_id'] ?>"><img src="edit.png" width="30" alt=""></a>
+                </td>
 
             </tr>
  <?php }?>
         </table>
 
     </div>
-  
+    <a href="student_entry.php">New Entry</a>
 </body>
 </html>
