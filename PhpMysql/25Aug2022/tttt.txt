@@ -1,0 +1,7 @@
+mysql -h localhost -u root -p
+
+create user 'Tokye'@'localhost' identified by'abcd';
+
+drop user 'Tokye'@'localhost';
+
+rename user 'dipu'@'localhost' TO 'Dipuu'@'localhost';
