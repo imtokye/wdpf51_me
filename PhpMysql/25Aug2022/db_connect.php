@@ -3,5 +3,5 @@
  $mysqli = new mysqli('localhost', 'tokye', 'abcd', 
 'wdpf51');
  
- }
+ 
 ?>
