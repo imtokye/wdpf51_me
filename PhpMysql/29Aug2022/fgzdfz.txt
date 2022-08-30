@@ -1,0 +1,20 @@
+SELECT productName,productDescription FROM products 
+WHERE MATCH(productDescription)AGAINST
+('Wheels');
+
+SELECT productName,productDescription FROM products 
+WHERE productDescription LIKE'%Wheels%'
+
+mysqldump -u root -p wdpf51 > D:\xampp\htdocs\WDPF_51_1269797\MySqlwdpf51_dump.sql
+
+mysql -u root -p wdpf51_blank < D:\xampp\htdocs\WDPF_51_1269797\MySqlwdpf51_dump.sql
+
+
+SELECT * INTO OUTFILE "D:/student_info.txt"
+ FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+ FROM wdpf51.student_info;
+
+SELECT * INTO OUTFILE "D:/student_info.xls"
+ FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+ FROM wdpf51.student_info;
+ 

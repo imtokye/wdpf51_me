@@ -5,3 +5,9 @@ create user 'Tokye'@'localhost' identified by'abcd';
 drop user 'Tokye'@'localhost';
 
 rename user 'dipu'@'localhost' TO 'Dipuu'@'localhost';
+
+GRANT SELECT on wdpf51. * to 'Tokye'@'localhost';
+
+GRANT UPDATE,DELETE on wdpf51. * to 'Dipuu'@'localhost';
+
+revoke insert on wdpf51.* FROM 'Tokye'@'localhost';
