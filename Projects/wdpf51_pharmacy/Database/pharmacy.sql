@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Database: `pharmacy`
 --
 CREATE DATABASE IF NOT EXISTS `pharmacy` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `pharmacy`;
+USE `wdpf51_pharmacy`;
 
 -- --------------------------------------------------------
 

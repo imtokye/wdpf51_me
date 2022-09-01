@@ -15,24 +15,24 @@ $user=$_SESSION['username'];
 $time=date("l\, F d Y\, h:i:s A", $t);
 $invoiceNo=$_SESSION['invoice'];
 		
-$getPresid=mysql_query("SELECT 1+MAX(prescription_id) FROM prescription");
-$presId=mysql_fetch_array($getPresid);
+$getPresid=mysqli_query($con,"SELECT 1+MAX(prescription_id) FROM prescription");
+$presId=mysqli_fetch_array($getPresid);
 		if($presId[0]=='')
 		{$presIdd=999; }
 		else{$presIdd=$presId[0];}
 	
-	$sqlP=mysql_query("INSERT INTO prescription(prescription_id,customer_id,customer_name,age,sex,postal_address,invoice_id,phone)
+	$sqlP=mysqli_query($con,"INSERT INTO prescription(prescription_id,customer_id,customer_name,age,sex,postal_address,invoice_id,phone)
 				VALUES('{$presIdd}','{$c_id}','{$cname}','{$age}','{$sex}','{$postal}','{$invoiceNo}','{$phone}')  ");
-		$sqlI=mysql_query("INSERT INTO invoice(invoice_id, customer_name,served_by,status)
+		$sqlI=mysqli_query($con,"INSERT INTO invoice(invoice_id, customer_name,served_by,status)
 				VALUES('{$invoiceNo}','{$cname}','{$user}','Pending') ");
 						
-$getDetails=mysql_query("SELECT * FROM tempprescri WHERE customer_id='{$c_id}'");
-while($item1=mysql_fetch_array($getDetails))
+$getDetails=mysqli_query($con,"SELECT * FROM tempprescri WHERE customer_id='{$c_id}'");
+while($item1=mysqli_fetch_array($getDetails))
 			{	
-				$getDetails1=mysql_query("SELECT stock_id, cost FROM stock WHERE drug_name='{$item1['drug_name']}'");	
+				$getDetails1=mysqli_query($con,"SELECT stock_id, cost FROM stock WHERE drug_name='{$item1['drug_name']}'");	
 			
-				$details=mysql_fetch_array($getDetails1);
-				$sqlId=mysql_query("INSERT INTO invoice_details(invoice,drug,cost,quantity)
+				$details=mysqli_fetch_array($getDetails1);
+				$sqlId=mysqli_query($con,"INSERT INTO invoice_details(invoice,drug,cost,quantity)
 				VALUES('{$invoiceNo}','{$details['stock_id']}','{$details['cost']}','{$item1['quantity']}')");
 				$count[]=$details['cost']*$item1['quantity'];
 		//	echo $invoiceNo."details".$details['stock_id']."-".$details['cost']."-".$item1['quantity'];
@@ -48,17 +48,17 @@ while($item1=mysql_fetch_array($getDetails))
 			$file=fopen("receipts/docs/".$c_id.".txt", "a+");
 	fwrite($file, "TOTAL;;;;;".$tot."\n");
 	fclose($file);
-		$getDetails=mysql_query("SELECT * FROM tempprescri WHERE customer_id='{$c_id}'");
-while($item12=mysql_fetch_array($getDetails))
+		$getDetails=mysqli_query($con,"SELECT * FROM tempprescri WHERE customer_id='{$c_id}'");
+while($item12=mysqli_fetch_array($getDetails))
 			{	
-			$getDetails12=mysql_query("SELECT stock_id, cost FROM stock WHERE drug_name='{$item12['drug_name']}'");	
+			$getDetails12=mysqli_query($con,"SELECT stock_id, cost FROM stock WHERE drug_name='{$item12['drug_name']}'");	
 			
-				$details2=mysql_fetch_array($getDetails12);
-			$sqlIp=mysql_query("INSERT INTO prescription_details(pres_id,drug_name,strength,dose,quantity)
+				$details2=mysqli_fetch_array($getDetails12);
+			$sqlIp=mysqli_query($con,"INSERT INTO prescription_details(pres_id,drug_name,strength,dose,quantity)
 				VALUES('{$presIdd}','{$details2['stock_id']}','{$item12['strength']}','{$item12['dose']}','{$item12['quantity']}') ");	
 					
 			}
-		$sqlD=mysql_query("DELETE FROM tempprescri WHERE customer_id='{$c_id}' ");
+		$sqlD=mysqli_query($con,"DELETE FROM tempprescri WHERE customer_id='{$c_id}' ");
 				
 	
 	//select all from temp prescri where cust/Id =$c_id

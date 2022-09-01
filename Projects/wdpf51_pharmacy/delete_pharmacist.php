@@ -10,7 +10,7 @@ exit();
 }
 $id=$_GET[pharmacist_id];
 $sql="delete from pharmacist where pharmacist_id='$id'";
-mysql_query($sql);
+mysqli_query($con,$sql);
 //$rows=mysql_fetch_assoc($result);
 header("location:admin_pharmacist.php");
 ?>

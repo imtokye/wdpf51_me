@@ -26,13 +26,13 @@ else
 {header('Location: payment.php');
 exit;}
 
-$getCid=mysql_query("SELECT customer_id FROM prescription WHERE invoice_id='{$invNo}' ");
-$getName=mysql_query("SELECT customer_name FROM invoice WHERE invoice_id='{$invNo}' ");
-$details1=mysql_fetch_array($getName); 
-$details=mysql_fetch_array($getCid);
+$getCid=mysqli_query($con,"SELECT customer_id FROM prescription WHERE invoice_id='{$invNo}' ");
+$getName=mysqli_query($con,"SELECT customer_name FROM invoice WHERE invoice_id='{$invNo}' ");
+$details1=mysqli_fetch_array($getName); 
+$details=mysqli_fetch_array($getCid);
 
 	
-	$sqlP=mysql_query("INSERT INTO receipts(reciptNo,customer_id,total,payType,serialno,served_by)
+	$sqlP=mysqli_query($con,"INSERT INTO receipts(reciptNo,customer_id,total,payType,serialno,served_by)
 				VALUES('{$recNo}','{$details['customer_id']}','{$amount}','{$pType}','{$serial}','{$_SESSION['username']}')  ");
 
 
