@@ -1,0 +1,7 @@
+CREATE VIEW students_results_view 
+AS 
+SELECT stid, stname, stmobile, rmodule_name, rtotal_marks FROM results,students WHERE stid = rstudent_id ORDER BY stname
+
+
+INSERT INTO students VALUES (NULL, stname, staddress, stmobile);
+DELETE FROM results WHERE rstudent_id=stid;
