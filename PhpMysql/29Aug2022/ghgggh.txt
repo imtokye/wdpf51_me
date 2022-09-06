@@ -15,3 +15,7 @@ DELIMITER ;
 CREATE VIEW product_info_view as
 SELECT p.id, m.nane as manufacturer_name, p.name, p.price FROM manufacturer m, product p 
 WHERE m.id=p.m anufacturer_id AND p.price>5000
+
+CREATE VIEW product_info_view2 as
+SELECT id ,name,price FROM  product
+WHERE price>5000

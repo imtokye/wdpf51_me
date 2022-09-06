@@ -1,7 +1,10 @@
 FILES 
+******VIEW*****
 
+CREATE VIEW product_info_view2 as
+SELECT id ,name,price FROM  product
+WHERE price>5000
 
-         -products.php
-	 -manufacturers.php
+****Trigger*****
 
 DELETE FROM product WHERE manufacturer_id = OLD.id
