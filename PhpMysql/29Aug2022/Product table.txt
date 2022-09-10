@@ -1,0 +1,11 @@
+
+
+
+ID (AutoNumber)
+PID (Text)
+PName (Text)  
+Details (Text) 
+Price (Currency) 
+Quantity (Number) 
+ReceivedDate (Date and Time)
+Photo (Attachment)
