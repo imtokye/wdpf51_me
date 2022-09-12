@@ -26,7 +26,7 @@
   -->
       <div class="logo">
         <a href="" class="simple-text logo-normal">
-          Niraj Dey
+          Aminul Islam
         </a>
       </div>
       <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a">
@@ -41,6 +41,12 @@
             <a class="nav-link" href="adduser.php">
               <i class="material-icons">person</i>
               <p>Add User</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="addcategories.php">
+              <i class="material-icons">add</i>
+              <p>Add Categories</p>
             </a>
           </li>
           <li class="nav-item">
