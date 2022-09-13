@@ -76,6 +76,12 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="managecategories.php">
+              <i class="material-icons">edit_user</i>
+              <p>Manage Categories</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="index.php">
               <i class="material-icons">logout</i>
               <p>Logout</p>
