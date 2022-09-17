@@ -2,13 +2,13 @@
     <?php
 session_start();
 include("../db.php");
-// if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
-// {
-// $cat_id=$_GET['cat_id'];
+if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
+{
+$cat_id=$_GET['cat_id'];
 
 /*this is delet quer*/
-// mysqli_query($con,"delete from categories where cat_id='$cat_id'")or die("query is incorrect...");
-// }
+mysqli_query($con,"delete from categories where cat_id='$cat_id'")or die("query is incorrect...");
+}
 
 include "sidenav.php";
 include "topheader.php";
@@ -39,7 +39,7 @@ include "topheader.php";
                         echo "<tr><td>$cat_id</td><td>$cat_title</td>";
 
                         echo"<td>
-                        <a href='edituser.php?cat_id=$cat_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
+                        <a href='editcategories.php?cat_id=$cat_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
                                 <i class='material-icons'>edit</i>
                               <div class='ripple-container'></div></a>
                         <a href='managecategories.php?cat_id=$cat_id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger btn-link btn-sm' data-original-title='Delete User'>

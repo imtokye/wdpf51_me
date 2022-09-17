@@ -15,7 +15,7 @@ if(isset($_POST['btn_save']))
 
 mysqli_query($con,"insert into categories values ('','$cat_title')") 
 			or die ("Query 1 is inncorrect........");
-header("location: manage_users.php"); 
+header("location: managecategories.php"); 
 mysqli_close($con);
 }
 
