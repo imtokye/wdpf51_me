@@ -44,9 +44,27 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="manageuser.php">
+              <i class="material-icons">edit_user</i>
+              <p>Manage User</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="addcategories.php">
               <i class="material-icons">add</i>
               <p>Add Categories</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="managecategories.php">
+              <i class="material-icons">edit_user</i>
+              <p>Manage Categories</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="addproduct.php">
+              <i class="material-icons">add</i>
+              <p>Add Products</p>
             </a>
           </li>
           <li class="nav-item">
@@ -63,26 +81,9 @@
               <p>Orders</p>
             </a>
           </li>
+          
           <li class="nav-item ">
-            <a class="nav-link" href="addproduct.php">
-              <i class="material-icons">add</i>
-              <p>Add Products</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="manageuser.php">
-              <i class="material-icons">edit_user</i>
-              <p>Manage User</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="managecategories.php">
-              <i class="material-icons">edit_user</i>
-              <p>Manage Categories</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="index.php">
+            <a class="nav-link" href="admin_logout.php">
               <i class="material-icons">logout</i>
               <p>Logout</p>
             </a>

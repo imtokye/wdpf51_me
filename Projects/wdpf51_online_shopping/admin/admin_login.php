@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(isset($_SESSION['email'])){
-  header("Location:admin_login.php");
+  header("Location:index.php");
 }
 
 ?>
@@ -15,11 +15,11 @@ if(isset($_SESSION['email'])){
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -38,17 +38,17 @@ if(isset($_SESSION['email'])){
       if(isset($_POST['login'])){
         extract($_POST);
         $pass= md5($password);
-        include_once("..db.php");
+        include_once("../db.php");
         $sql= "SELECT * FROM admin_info WHERE admin_email='$email' AND admin_password='$pass'";
-        $result=$db->query($sql);
+        $result=$con->query($sql);
         $row=$result->fetch_assoc();
       if($result->num_rows>0){
-        session_start();
-        $_SESSION['email']= $row['email'];
-        $_SESSION['name']= $row['name'];
-        $_SESSION['usertype']= $row['usertype'];
+        // session_start();
+        $_SESSION['email']= $row['admin_email'];
+        $_SESSION['name']= $row['admin_name'];
+        // $_SESSION['usertype']= $row['usertype'];
 
-          header("Location:admin_login.php");
+          header("Location:index.php");
         }else {
           echo "<div class='alert alert-danger'>Email or password is wrong </div>";
         }
@@ -60,7 +60,7 @@ if(isset($_SESSION['email'])){
 
       <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="email" name="email" value="imtokye@gmail.com" class="form-control" placeholder="Email">
+          <input type="email" name="email" value="" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -68,7 +68,7 @@ if(isset($_SESSION['email'])){
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="password" value="abcd1234" class="form-control" placeholder="Password">
+          <input type="password" name="password" value="" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -116,9 +116,9 @@ if(isset($_SESSION['email'])){
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="assets/js/core/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/bootstrap-notify.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 

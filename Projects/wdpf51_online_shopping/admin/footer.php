@@ -4,7 +4,7 @@
             <ul>
               <li>
                 <a href="">
-                  Niraj dey
+                  Aminul Islam
                 </a>
               </li>
             </ul>
@@ -14,7 +14,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="" target="_blank">Niraj dey</a> for a better web.
+            <a href="" target="_blank">Aminul Islam</a> for a better web.
           </div>
           <!-- your footer here -->
         </div>

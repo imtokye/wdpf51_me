@@ -1,6 +1,9 @@
     <?php
 session_start();
 include("../db.php");
+if(!isset($_SESSION['email'])){
+  header("Location:admin_login.php");
+}
 
 include "sidenav.php";
 include "topheader.php";
@@ -79,7 +82,7 @@ include "topheader.php";
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">Brands List</h4>
@@ -112,9 +115,9 @@ include "topheader.php";
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
               </div>
             </div>
-          </div>
+          </div> -->
            </div>
-           <div class="col-md-5">
+           <!-- <div class="col-md-5">
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">Subscribers</h4>
@@ -141,7 +144,7 @@ include "topheader.php";
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
               </div>
             </div>
-          </div>
+          </div> -->
            
             
           
