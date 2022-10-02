@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#login").click(function(){
+                var em = $("#email").val();
+                var pass =$("#pass").val();
+                $.post("check.php",{email:em,password:pass},function(data){
+                    $("#show").html(data);
+                })
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <form action="" method="post">
+      Email: <br><input type="email" id="email"><br>
+      Password:<br><input type="password" id="pass"><br>
+        <input type="button" id="login" value="Login"><br>
+    </form>
+    <div id="show"></div>
+</body>
+</html>
