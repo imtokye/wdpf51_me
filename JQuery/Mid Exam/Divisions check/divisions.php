@@ -25,7 +25,8 @@ $db = new mysqli("localhost", "root", "", "wdpf51_blank");
 
 </head>
 <body>
-    <h2>Division wise District List</h2>
+    <h2>Division wise 
+        District List</h2>
     <form action="">
         <select id="divid">
             <option value="" disabled selected>Select One</option>
