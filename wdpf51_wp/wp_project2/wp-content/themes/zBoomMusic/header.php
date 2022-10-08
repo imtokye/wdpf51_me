@@ -33,8 +33,8 @@
 	<![endif]-->
 	
 	<link href='<?php echo get_template_directory_uri()?>/images/favicon.ico' rel='icon' type='<?php echo get_template_directory_uri()?>/image/x-icon'/>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/responsiveslides.js"></script>
+	<script src="<?php echo get_template_directory_uri()?>/js/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri()?>/js/responsiveslides.js"></script>
 	<script>
 		$(function () {
 		  $("#slider").responsiveSlides({

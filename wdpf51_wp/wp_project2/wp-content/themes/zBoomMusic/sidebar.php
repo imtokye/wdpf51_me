@@ -1,4 +1,4 @@
-<?php dynamic_sidebar('sidebar');?>
+<?php dynamic_sidebar('sidebar-1');?>
 
 <!-- <div class="col-1-3">
 				<div class="wrap-col">
