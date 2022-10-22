@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/responsive.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/responsiveslides.css" />
 	
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri()?>">
+	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -35,6 +37,7 @@
 	<link href='<?php echo get_template_directory_uri()?>/images/favicon.ico' rel='icon' type='<?php echo get_template_directory_uri()?>/image/x-icon'/>
 	<script src="<?php echo get_template_directory_uri()?>/js/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri()?>/js/responsiveslides.js"></script>
+	
 	<script>
 		$(function () {
 		  $("#slider").responsiveSlides({
@@ -48,6 +51,7 @@
 		});
 	</script>
 	<?php wp_head();?>
+	
 </head>
 <body <?php body_class();?>>
 <!--------------Header--------------->
@@ -61,6 +65,8 @@
 		</div>
 	</div>
 </header>
+<!-- <div id="example-1">The quick brown fox jumps over the lazy dog</div> -->
+<?php if(function_exists('NewsTicker_init')) echo NewsTicker_init();?>
 
 <nav>
 	<div class="wrap-nav zerogrid">
