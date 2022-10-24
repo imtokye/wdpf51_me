@@ -1,0 +1,9 @@
+cmp check
+node -v
+npm install --global @angular/cli@14.2.6
+ng new todo
+ng serve
+
+npm install bootstrap@4.1.1
+
+otv.ftpbd.com
