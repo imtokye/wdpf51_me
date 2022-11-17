@@ -1,0 +1,37 @@
+1) angular project kore tar moddhe rakhte hbe html template 
+
+2) template ar css, images, js niye rakhte hbe angular project ar src->asstes->tar vitor
+
+3) Html tempalate ar index.html copy kore niye src ar index.html a rakhte hbe.
+
+4)src ar index.html ar style file ta angular json a add korte hbe src/assets/css/styles/css
+
+5)script ar jonno asstes a js a script.js file baniye tar moddhe rakhte hbe and angular json a path dehate hbe script a  & photoes gula patha dekhay dite hbe.
+
+6) header footer component banate hbe ng g c header.
+
+7)then header & footer kete nite hbe header component.html & footer.component.html and body part ta home component baniye home.component.html a rakhte hbe
+
+8)app.component.html a 
+<app-header></app-header>
+<router-outlet></router-outlet> 
+<app-footer></app-footer>
+
+9)index.html a app-root dite hbe
+
+10) app-routing.module.ts a path add korte hbe { path:'',component:HomeComponent}
+& auto import hoye jabe..
+
+11) about component bante hbe 
+
+12) template ar about.html ar section part ta kete niye about.component.html a rakhte hbe
+
+13) app-routing.module.ts a path add korte hbe 
+{ path:'about',component:AboutComponent}
+
+component ar name likhe dite hbe
+
+14)header.component.html a router link korte hbe   
+<li><a routerLink="about">About</a></li>
+
+avabei cholbe baki gulo..
